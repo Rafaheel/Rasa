@@ -1,0 +1,81 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- saudacao:
+    use_entities: true
+- info_condominio:
+    use_entities: true
+- info_privativa:
+    use_entities: true
+- info_area_privativa:
+    use_entities: true
+- info_area_util:
+    use_entities: true
+- info_area_comum:
+    use_entities: true
+- info_tipo_condominio:
+    use_entities: true
+- info_condominio_lei:
+    use_entities: true
+- info_condominio_assembleia:
+    use_entities: true
+- Info_condominio_codcivil:
+    use_entities: true
+- despedida:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_inicio:
+  - text: Como posso ajudar hoje?
+  utter_saudacao:
+  - text: Olá como vai você?
+  utter_info_condominio:
+  - text: Condomínio é a propriedade simultânea de um bem móvel ou imóvel por uma ou mais pessoas, que compartilham esse benefício. Portanto, cada proprietário possui e é responsável por sua unidade privativa.
+  utter_area_privativa:
+  - text: A área privativa é a área interna de um apartamento/casa/sala delimitada pelas paredes - incluindo a garagem e as próprias divisões.
+  utter_info_area_util:
+  - text: Área útil também corresponde ao espaço privativo de cada morador, somando todos os ambientes internos, mas sem contar a garagem, a varanda e as paredes, por exemplo.
+  utter_info_area_comum:
+  - text: 'Área comum é o espaço com todas as partes que compõem o condomínio e são de uso comum de todos os condôminos. Por exemplo: áreas de circulação, de lazer e atividades, jardins, piscinas, salão de festas, etc.'
+  utter_info_tipo_condominio:
+  - text: |-
+      Hoje existem diversos tipos de condomínio, classificados conforme suas características e particularidades. O mais conhecido é o condomínio edilício, onde coexistem propriedades privadas e comuns, e as unidades autônomas, juntas, formam uma edificação maior. O condomínio edilício tem documentos de instituição, convenção e regimento interno, obedecendo às regras estipuladas no Código Civil - artigos 1.331 a 1.358.
+
+      Há ainda o condomínio voluntário, que acontece quando duas ou mais pessoas unem-se com um interesse em comum, como a compra de um imóvel por um grupo de amigos, por exemplo ou, ainda, quando dois profissionais dividem a mesma sala.
+
+      Por último entre os mais comuns, o condomínio necessário - também conhecido como “forçado” ou “legal” - é uma modalidade criada para os casos em que é preciso separar duas propriedades. Isso inclui construir muros e cercas para separar proprietários e vizinhos, por exemplo.
+  utter_info_condominio_lei:
+  - text: |-
+      Pegando o gancho sobre legislação, vale lembrar ainda que a Lei nº 10.406/2002 (Código Civil) é a principal lei federal que regulamenta os condomínios e assim estabelece suas especificações. 
+
+      Abaixo dessa norma (e obrigatoriamente condizente com ela), é importante saber que cada condomínio conta com sua convenção e seu regimento interno. Ou seja, leis condominiais criadas para tratar suas particularidades, como direitos e deveres dos condôminos, taxa condominial, administração, dentre outros tópicos comuns.
+  utter_info_condominio_assembleia:
+  - text: A assembleia de condomínio é a reunião feita entre os responsáveis pela gestão do empreendimento e seus moradores, a fim de discutir assuntos de interesse coletivo. É o momento em que os condôminos se encontram para tomar decisões sobre questões administrativas e que afetam a rotina do condomínio, tirando suas dúvidas sobre a gestão e o trabalho do síndico.
+  utter_Info_condominio_codcivil:
+  - text: Lei do Condomínio - Lei 4591/64 | Lei nº 4.591, de 16 de dezembro de 1964, Presidência da Republica.
+  utter_despedida:
+  - text: Até mais!
+actions:
+- info_area_privativa
+- info_area_util
+forms: {}
+e2e_actions: []

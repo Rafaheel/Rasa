@@ -1,0 +1,39 @@
+version: "2.0"
+stories:
+- story: info_condominio
+  steps:
+  - intent: info_condominio
+  - action: utter_info_condominio
+- story: saudacao
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - action: utter_inicio
+- story: area_privativa
+  steps:
+  - intent: info_area_privativa
+  - action: utter_area_privativa
+- story: info_area_util
+  steps:
+  - intent: info_area_util
+  - action: utter_info_area_util
+- story: info_area_comum
+  steps:
+  - intent: info_area_comum
+  - action: utter_info_area_comum
+- story: info_tipo_condominio
+  steps:
+  - intent: info_tipo_condominio
+  - action: utter_info_tipo_condominio
+- story: info_condominio_lei
+  steps:
+  - intent: info_condominio_lei
+  - action: utter_info_condominio_lei
+- story: info_condominio_assembleia
+  steps:
+  - intent: info_condominio_assembleia
+  - action: utter_info_condominio_assembleia
+- story: Info_condominio_codcivil
+  steps:
+  - intent: Info_condominio_codcivil
+  - action: utter_Info_condominio_codcivil

@@ -1,0 +1,38 @@
+version: "2.0"
+nlu:
+- intent: saudacao
+  examples: |
+    - bom dia
+    - oi
+    - ola
+    - boa tarde
+    - boa noite
+    - e ai
+- intent: info_condominio
+  examples: |
+    - O que é Condomínio?
+- intent: info_area_privativa
+  examples: |
+    - O que é area Privativa
+- intent: info_area_util
+  examples: |
+    - o que é area util
+- intent: info_area_comum
+  examples: |
+    - o que é area comum
+- intent: info_tipo_condominio
+  examples: |
+    - Quais os Tipos de Condominio
+- intent: info_condominio_lei
+  examples: |
+    - Qual é a Lei que rege os Condominios
+- intent: info_condominio_assembleia
+  examples: |
+    - O que é Assembleia de Condominio
+- intent: Info_condominio_codcivil
+  examples: |
+    - o que regulamento os condominios
+- intent: despedida
+  examples: |
+    - tchau
+    - adeus
