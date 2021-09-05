@@ -37,3 +37,17 @@ stories:
   steps:
   - intent: Info_condominio_codcivil
   - action: utter_Info_condominio_codcivil
+- story: pedidos_portaria
+  steps:
+  - intent: pedidos_portaria
+  - action: utter_pedidos_portaria
+
+- story: sobre_sindico
+  steps:
+  - intent: sobre_sindico
+  - action: utter_sobre_sindico
+
+- story: reservas_condominio
+  steps:
+  - intent: reservas_condominio
+  - action: utter_pedidos_portaria
