@@ -11,18 +11,53 @@ nlu:
 - intent: info_condominio
   examples: |
     - O que é Condomínio?
+    - O que define um condominio?
+    - quais as caracteristicas de um condominio?
+    - falar sobre condominio
+    - explicar sobre condominio
+    - explicar o que é um condominio
+    - explicar o que é condominio
+    - defina condomionio
 - intent: info_area_privativa
   examples: |
     - O que é area Privativa
+    - O que é area Privativa?
+    - O que define um area Privativa?
+    - quais as caracteristicas de um area Privativa?
+    - falar sobre area Privativa
+    - explicar sobre area Privativa
+    - explicar o que é uma area Privativa
+    - explicar o que é area Privativa
+    - defina area Privativa
 - intent: info_area_util
   examples: |
     - o que é area util
+    - O que é area util?
+    - O que define um area util?
+    - quais as caracteristicas de um area util?
+    - falar sobre area util
+    - explicar sobre area util
+    - explicar o que é uma area util
+    - explicar o que é area util
+    - defina area area util
 - intent: info_area_comum
   examples: |
     - o que é area comum
+    - O que é area comum?
+    - O que define um area comum?
+    - quais as caracteristicas de um area comum?
+    - falar sobre area comum
+    - explicar sobre area comum
+    - explicar o que é uma area comum
+    - explicar o que é area comum
+    - defina area area comum
 - intent: info_tipo_condominio
   examples: |
     - Quais os Tipos de Condominio
+    - quantos tipos de condaminio existe
+    - tem mais de um tipo de condominio
+    - existem quantos tipos de condominio
+    - existe só um tipo de condominio?    
 - intent: info_condominio_lei
   examples: |
     - Qual é a Lei que rege os Condominios
@@ -36,3 +71,38 @@ nlu:
   examples: |
     - tchau
     - adeus
+- intent: pedidos_portaria
+  examples: |
+    - chegou carta
+    - chegou carta para mim
+    - chegou carta correspondencias para mim
+    - tem correspondencia para mim 
+    - tem correspondencia para o meu apartamento
+    - eu tenho cartas
+    - tem envelope para mim
+    - ha algum envelope ai
+    - chegou algo ai
+    - chegou meus boletos
+    - chegou meu boleto
+    - chegou comida chegou ifood
+    - tem entrega para mim
+    - tem compras ai para mim 
+    - chegou alguma coisa
+    - chegou lanche
+    - tem coisa ai para mim
+- intent: sobre_sindico
+  examples: |
+    - o que faz um sindico
+    - quais as funcoes de um sindico
+    - sindico faz o que
+    - qual a funcao do sindico
+    - o que um sindico tem que fer
+    - sindico faz o que
+- intent: reservas_condominio
+  examples: |
+    - tem horario livre para o salão festa
+    - queria reservar o salao de festa
+    - fazer reserva do salao
+    - reserva para mim o salão de festa
+    
+    
