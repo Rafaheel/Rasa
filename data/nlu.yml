@@ -8,6 +8,7 @@ nlu:
     - boa tarde
     - boa noite
     - e ai
+    - opa
 - intent: info_condominio
   examples: |
     - O que é Condomínio?
