@@ -3,11 +3,13 @@ nlu:
 - intent: saudacao
   examples: |
     - bom dia
-    - oi
-    - ola
     - boa tarde
     - boa noite
+    - oi
+    - ola
     - e ai
+<<<<<<< HEAD
+=======
     - opa
 - intent: info_condominio
   examples: |
@@ -68,42 +70,32 @@ nlu:
 - intent: Info_condominio_codcivil
   examples: |
     - o que regulamento os condominios
+>>>>>>> 4158a58466888cf81e1d8cf1da3b93c0210ad748
 - intent: despedida
   examples: |
     - tchau
     - adeus
-- intent: pedidos_portaria
-  examples: |
-    - chegou carta
-    - chegou carta para mim
-    - chegou carta correspondencias para mim
-    - tem correspondencia para mim 
-    - tem correspondencia para o meu apartamento
-    - eu tenho cartas
-    - tem envelope para mim
-    - ha algum envelope ai
-    - chegou algo ai
-    - chegou meus boletos
-    - chegou meu boleto
-    - chegou comida chegou ifood
-    - tem entrega para mim
-    - tem compras ai para mim 
-    - chegou alguma coisa
-    - chegou lanche
-    - tem coisa ai para mim
-- intent: sobre_sindico
-  examples: |
-    - o que faz um sindico
-    - quais as funcoes de um sindico
-    - sindico faz o que
-    - qual a funcao do sindico
-    - o que um sindico tem que fer
-    - sindico faz o que
-- intent: reservas_condominio
-  examples: |
-    - tem horario livre para o salão festa
-    - queria reservar o salao de festa
-    - fazer reserva do salao
-    - reserva para mim o salão de festa
-    
-    
+    - ate logo
+    - ate mais
+    - ate mais tarde
+    - ate depois
+    - t+
+    - t +
+#- intent: pedidos_portaria
+#  examples: |
+#    - chegou ifood
+#    - chegou minhas compras
+#    - chegou minha comida
+#    - tem compras para mim
+#    - chegou comida
+#    - chegou compras
+
+- intent: opcoes
+  examples: |    
+    - Delivery
+    - Reservas
+    - Duvidas
+    - Informar Distúrbios
+
+
+      

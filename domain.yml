@@ -7,66 +7,68 @@ session_config:
 intents:
 - saudacao:
     use_entities: true
-- info_condominio:
-    use_entities: true
-- info_privativa:
-    use_entities: true
-- info_area_privativa:
-    use_entities: true
-- info_area_util:
-    use_entities: true
-- info_area_comum:
-    use_entities: true
-- info_tipo_condominio:
-    use_entities: true
-- info_condominio_lei:
-    use_entities: true
-- info_condominio_assembleia:
-    use_entities: true
-- Info_condominio_codcivil:
-    use_entities: true
 - despedida:
     use_entities: true
-- pedidos_portaria:
+- opcoes:
     use_entities: true
-- sobre_sindico:
-    use_entities: true
-- reservas_condominio:
+- delivery:
     use_entities: true
 entities: []
-slots: {}
+slots:
+  first_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  last_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
-  utter_inicio:
-  - text: Somos a Versátil Condomínio, buscamos atender com soluções relevantes através da tecnologia! Como podemos ajudar hoje?
   utter_saudacao:
-  - text: Olá como vai você?
-  utter_info_condominio:
-  - text: Condomínio é a propriedade simultânea de um bem móvel ou imóvel por uma ou mais pessoas, que compartilham esse benefício. Portanto, cada proprietário possui e é responsável por sua unidade privativa.
-  utter_area_privativa:
-  - text: A área privativa é a área interna de um apartamento/casa/sala delimitada pelas paredes - incluindo a garagem e as próprias divisões.
-  utter_info_area_util:
-  - text: Área útil também corresponde ao espaço privativo de cada morador, somando todos os ambientes internos, mas sem contar a garagem, a varanda e as paredes, por exemplo.
-  utter_info_area_comum:
-  - text: 'Área comum é o espaço com todas as partes que compõem o condomínio e são de uso comum de todos os condôminos. Por exemplo: áreas de circulação, de lazer e atividades, jardins, piscinas, salão de festas, etc.'
-  utter_info_tipo_condominio:
-  - text: 'Hoje existem diversos tipos de condomínio, o mais conhecido é o condomínio edilício, onde coexistem propriedades privadas e comuns, e as unidades autônomas, juntas, formam uma edificação maior.           '
-  utter_info_condominio_lei:
-  - text: 'Pegando o gancho sobre legislação, vale lembrar ainda que a Lei nº 10.406/2002 (Código Civil) é a principal lei federal que regulamenta os condomínios e assim estabelece suas especificações.      '
-  utter_info_condominio_assembleia:
-  - text: A assembleia de condomínio é a reunião feita entre os responsáveis pela gestão do empreendimento e seus moradores, a fim de discutir assuntos de interesse coletivo.
-  utter_Info_condominio_codcivil:
-  - text: Lei do Condomínio - Lei 4591/64 | Lei nº 4.591, de 16 de dezembro de 1964, Presidência da Republica.
+  - text: |-
+      Olá, somos a Versátil Condomínio, buscamos atender com soluções relevantes através da tecnologia!
+      Como podemos ajudar hoje?
   utter_despedida:
-  - text: Até mais!
-  utter_pedidos_portaria:
-  - text: Para eu dizer ao certo, primeiro eu preciso saber quem você é, que tal começar me dizendo
-  Seu nome.
-  Seu bloco
-  Numero do seu apartamento
-  utter_sobre_sindico:
-  - text: O sindico tem as seguintes funções = Contratar uma administradora Solicitar cotações, cobrar que os serviços executados Pagar em dia as contas do condomínio Inadimplência Contratar e demitir funcionários ou uma empresa terceirizada Fazer valer as boas práticas de convivência entre os condôminos, e prezar pelo cumprimento das regras definidas em assembleias.
+  - text: Até mais tarde, se precisar só me chamar!
+  utter_opcoes:
+  - buttons:
+    - payload: Delivery
+      title: Delivey
+    - payload: Reservas
+      title: Reservas
+    - payload: Duvidas
+      title: Duvidas
+    - payload: Informar Distúrbios
+      title: Informar Distúrbios
+    text: Das opções abaixo, escolha a que deseja
+  utter_resposta_opcoes_nome:
+  - text: 'Para isso, precisarei saber quem é você. '
+  utter_submit:
+  - text: Ok. Obrigado!
+  utter_slots_values:
+  - text: Olá {first_name} {last_name}, é bom te ver por aqui!
+  utter_ask_first_name:
+  - text: Qual o seu nome?
+  utter_ask_last_name:
+  - text: Qual o seu sobrenome?
+  
 actions:
-- info_area_privativa
-- info_area_util
-forms: {}
+- resposta_opcoes_nome
+- utter_slots_values
+- utter_submit
+- validate_name_form
+forms:
+  name_form:
+    required_slots:
+      first_name:
+      - type: from_text
+      last_name:
+      - type: from_text
 e2e_actions: []
